@@ -1,8 +1,7 @@
 <title>BuildingWorld SSR Requirements</title>
 <style>
 :root{--bg:#f7f8fa;--fg:#14202e;--mut:#5b6877;--card:#fff;--line:#dde2e8;--red:#d6264a;--redbg:#fde9ee;--grn:#16803c;--grnbg:#e6f5ec;--blu:#2457d6;--blubg:#e8eefc;--yel:#fde047;--accent:#14365d}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1620;--fg:#e6ebf1;--mut:#9aa7b6;--card:#172130;--line:#2a3646;--red:#ff6b88;--redbg:#3a1a24;--grn:#4cc57a;--grnbg:#14301f;--blu:#7aa2ff;--blubg:#16213d;--accent:#9ec1ee;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0f1620;--fg:#e6ebf1;--mut:#9aa7b6;--card:#172130;--line:#2a3646;--red:#ff6b88;--redbg:#3a1a24;--grn:#4cc57a;--grnbg:#14301f;--blu:#7aa2ff;--blubg:#16213d;--accent:#9ec1ee;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#1c1c1e;--fg:#e8e8ea;--mut:#a1a1a6;--card:#262628;--line:#3d3d40;--red:#ff7a93;--redbg:#3a2a2e;--grn:#5fcf8a;--grnbg:#26332b;--blu:#8fb0ff;--blubg:#2a2f3d;--accent:#d2d2d6;color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding-inline:16px}
 .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px}
@@ -53,7 +52,7 @@ th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);verti
 <span><i class="sw g"></i><b>Green:</b> already in the first HTML. Keep.</span>
 <span><i class="sw b"></i><b>Blue dashed:</b> not a real link (<code>&lt;a href&gt;</code>) in the first HTML.</span>
 </div>
-<p class="sub" style="margin:10px 0 0">Captured on a 4K display, 4 tiles per view stitched to 3136 × 1215 px. A green “H1 · already in first HTML” tag marks an H1 that is already server-rendered.</p></div>
+<p class="sub" style="margin:10px 0 0">A green “H1 · already in first HTML” tag marks an H1 that is already server-rendered.</p></div>
 
 <div class="box"><h3>Rules for every page</h3>
 <ol class="rules">
@@ -140,5 +139,5 @@ th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);verti
 <p class="sub">Limits: raw HTML was fetched from a browser session without cookies and without a Googlebot user-agent. One URL per template is shown; 5 L1, 5 L2, 5 L3, 20 detail pages and 14 hub pages were scanned and the pattern was the same within each template (see the scan log).</p>
 </div>
 <script>
-(function(){var b=document.getElementById('tb'),r=document.documentElement;b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);r.setAttribute('data-theme',d?'light':'dark')})})();
+(function(){var b=document.getElementById('tb'),r=document.documentElement;b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark';r.setAttribute('data-theme',d?'light':'dark')})})();
 </script>
